@@ -6,8 +6,18 @@ permalink: /about/
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
+    var pressed = 0;
     $("boutton").click(function(){
-        $("boutton").style.backgroundColor = 'red';
+        if(pressed == 0)
+        {
+          pressed = 1;
+          $("boutton").style.backgroundColor = 'red';
+        }
+        else
+        {
+          pressed = 0;
+          $("boutton").style.backgroundColor = 'green';
+        }
       });
     });
 </script>
